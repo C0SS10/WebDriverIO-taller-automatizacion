@@ -7,7 +7,17 @@ let contactEmail = `test${Date.now()}@example.com`;
 Given("I am logged in", async () => {
   await LoginPage.open();
   await LoginPage.login("estebangonzalez888@gmail.com", "password123");
-  await browser.waitUntil(() => browser.getUrl().includes("/contactList"));
+
+  await browser.waitUntil(
+    async () => {
+      const url = await browser.getUrl();
+      return url.includes("/contactList");
+    },
+    {
+      timeout: 5000,
+      timeoutMsg: "Expected to be on /contactList page after login",
+    }
+  );
 });
 
 When("I click on the Add Contact button", async () => {
