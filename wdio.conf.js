@@ -22,7 +22,7 @@ export const config = {
   // then the current working directory is where your `package.json` resides, so `wdio`
   // will be called from there.
   //
-  specs: ["./features/**/login.feature", "./features/**/addContact.feature"],
+  specs: ["./features/**/login.feature", "./features/**/add-contact.feature"],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
