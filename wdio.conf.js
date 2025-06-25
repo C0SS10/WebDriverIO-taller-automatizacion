@@ -22,7 +22,7 @@ export const config = {
   // then the current working directory is where your `package.json` resides, so `wdio`
   // will be called from there.
   //
-  specs: ["./features/**/login.feature"],
+  specs: ["./features/**/login.feature", "./features/**/addContact.feature"],
   // Patterns to exclude.
   exclude: [
     // 'path/to/excluded/files'
@@ -139,7 +139,10 @@ export const config = {
   // If you are using Cucumber you need to specify the location of your step definitions.
   cucumberOpts: {
     // <string[]> (file/dir) require files before executing features
-    require: ["./features/step-definitions/LoginSteps.js"],
+    require: [
+      "./features/step-definitions/LoginSteps.js",
+      "./features/step-definitions/AddContactSteps.js",
+    ],
     // <boolean> show full backtrace for errors
     backtrace: false,
     // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
