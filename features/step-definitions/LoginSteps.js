@@ -1,5 +1,5 @@
 import { Given, When, Then } from "@wdio/cucumber-framework";
-import LoginPage from "../pageobjects/LoginPage.js";
+import LoginPage from "../pageobjects/login.page.js";
 
 Given("I am on the login page", async () => {
   await LoginPage.open();
